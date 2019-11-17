@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+	<display-name>spring-mvc-demo</display-name>
+
+	<absolute-ordering />
+
+	<!-- Spring MVC Configs -->
+	
+	<!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- This below tag is for servlet config, refer telusko servlet-demo-app. This would be used by 
+			 DispatcherServlet, to find out about all the beans of the project. To be more specific, 
+			 DispatcherServlet would load "/WEB-INF/spring-mvc-demo-servlet.xml" file inside 
+			 WebApplicationContext Spring IOC container. So internally, DispatcherServlet is initializing 
+			 WebApplicationContext (extends ApplicationContext) Spring IOC container, which in tern loading all
+			 the beans in memory. -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-mvc-demo-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Step 2: Set up URL mapping for Spring MVC Dispatcher Servlet. So every request will go through  -->
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
