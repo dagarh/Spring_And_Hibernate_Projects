@@ -34,15 +34,20 @@
 	 Country:
 	 
 	 <form:select path="country">
+	 
 	 <!-- label is what user will see in the drop-down menu. value is what will be passed
 	 	  to the "country" field of POJO. So, on submit, spring will call student.setCountry(..) -->
 	 	  
 	 <!-- Instead of hard-coding values, we can also configure these in a POJO class, inside 
-	 	  constructor. And fetch values from either database or web-service or properties file. -->
+	 	  constructor. And fetch values from either database or web-service or properties file.
 	 	<form:option value = "Brazil" label = "Brazil" />
 	 	<form:option value = "France" label = "France" />
 	 	<form:option value = "Germany" label = "Germany" />
-	 	<form:option value = "India" label = "India" />
+	 	<form:option value = "India" label = "India" /> -->
+	 	
+	 	<!-- items refer to the collection of data. Spring will call 
+	 		 student.getCountryOptions() -->
+	 	<form:options items="${student.countryOptions}"/>
 	 	
 	 </form:select>
 	 
