@@ -2,7 +2,12 @@ package com.luv2code.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
-// A Simple POJO, which will hold data.
+/* A Simple POJO, which is used for data binding (between view and controller) by Spring MVC 
+ * form tags. 
+ * 
+ * We can also put the validation on the fields of this POJO class by using "Java's Standard Bean
+ * Validation API". One of the implementations of this requirement is "Hibernate-Validator" project.
+ */
 public class Student {
 	
 	private String firstName;

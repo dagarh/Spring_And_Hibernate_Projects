@@ -4,8 +4,9 @@
 
     
 <!-- This is a taglib directive. I added this so that we can make use of JSP standard tag library
-	 features -->
+	 (JSTL) features -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 

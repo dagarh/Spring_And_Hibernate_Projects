@@ -36,7 +36,13 @@
 
 <br><br>
 
+<!-- This below anchor tag will hit a backend request with "customer/showForm" pattern. -->
+<a href = "customer/showForm">Customer form</a>
+
+<br><br>
+
 <input type="button" onclick="doSomeWork()" value="Click Me"/>
+
 </body>
 
 </html>

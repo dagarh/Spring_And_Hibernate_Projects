@@ -16,8 +16,8 @@
 
 <body>
 	<!-- Below are the Spring MVC form tags which we are using for data binding i.e for passing 
-		 the data between views and controllers back and forth. With the help of Spring MVC, it 
-		 gets really easy to do so. -->
+		 the data between views and controllers back and forth. With the help of Spring MVC form tags, 
+		 data binding becomes very-very easy by using some POJO class object as a model attribute. -->
 	
 	<!-- This modelAttribute must match with the attribute which you added to the Model object
 		 inside Controller. When this form is loaded, Spring MVC will call getters on the 
