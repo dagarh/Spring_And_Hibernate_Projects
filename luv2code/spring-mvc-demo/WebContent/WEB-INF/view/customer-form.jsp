@@ -50,10 +50,18 @@
 		<br><br>
 		
 		<!-- path represents property of a model attribute's class -->
-		Free passes: <form:input path="freePasses"/>
+		Free passes (*): <form:input path="freePasses"/>
 		<!-- display error message, just next to the text field, if error message has been set. 
 			 This cssClass 'error' is defined above in the HTML header. -->
 		<form:errors path = "freePasses" cssClass="error"/>
+		
+		<br><br>
+		
+		<!-- path represents property of a model attribute's class -->
+		Postal Code: <form:input path="postalCode"/>
+		<!-- display error message, just next to the text field, if error message has been set. 
+			 This cssClass 'error' is defined above in the HTML header. -->
+		<form:errors path = "postalCode" cssClass="error"/>
 		
 		<br><br>
 		

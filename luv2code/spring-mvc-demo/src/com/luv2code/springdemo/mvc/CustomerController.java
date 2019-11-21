@@ -59,6 +59,16 @@ public class CustomerController {
 		 * , based on the annotation which we have applied to the fields of a customer POJO class.
 		 * 
 		 * And after validation, spring will store results of validation in BindingResult object. */
+		
+		/* Printing "theBindingResult" will give you lots of benefits from debugging perspective 
+		 * (Because it has wealth of information). If validation fails then Spring will show default
+		 * error message for some code. By printing the below statement, we can find appropriate code 
+		 * and override it in our messages.properties file, which is under "src/resources" folder.
+		 * 
+		 * In the console, spring shows error codes from very specific to very generic type towards 
+		 * the right. You can choose one or more appropriately. */    
+		System.out.println("Binding Result: " + theBindingResult + "\n\n");
+		
 		if(theBindingResult.hasErrors()) {
 			return "customer-form";
 		} else {

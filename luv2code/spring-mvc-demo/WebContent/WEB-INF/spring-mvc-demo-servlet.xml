@@ -53,6 +53,17 @@
 		 WEB-INF. So that's why location is given like below.  -->
 	<util:properties id="countryOptions" location="classpath:../countries.properties" />
 
+
+	<!-- Load custom message resources i.e to override some standard error codes.  -->
+	<bean id = "messageSource" 
+		class = "org.springframework.context.support.ResourceBundleMessageSource">
+		<!-- In order to specify the location of properties file, we need to set this
+			 below property of messageSource bean. Then spring will load 
+			 "src/resources/messages.properties" file. -->
+		<property name="basenames" value="resources/messages" />
+	
+	</bean>
+	
 </beans>
 
 
